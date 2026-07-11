@@ -76,9 +76,9 @@
         margin-bottom: 30px;
         color: var(--primary-color);
         font-size: 2rem;
+        font-weight: 600;
       }
 
-      /* Stylizacja Harmonijki (Accordion) */
       .faq-item {
         background: white;
         margin-bottom: 15px;
@@ -119,7 +119,7 @@
       .faq-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-out;
+        transition: max-height 0.4s ease-out;
         background: #fafafa;
       }
 
@@ -128,7 +128,6 @@
         border-top: 1px solid #e1e8ed;
       }
 
-      /* Sekcje odpowiedzi wewnątrz FAQ */
       .box-ndi {
         background-color: #f1f2f6;
         border-left: 4px solid var(--ndi-color);
@@ -154,16 +153,24 @@
 
       .box-nabywcy h4 {
         color: var(--nabywcy-color);
-        margin-bottom: 8px;
+        margin-bottom: 15px;
         text-transform: uppercase;
         font-size: 0.85rem;
         letter-spacing: 1px;
       }
 
-      /* Klasa aktywna dla rozwijania */
+      .box-nabywcy p {
+        margin-bottom: 10px;
+      }
+
+      .box-nabywcy ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+
       .faq-item.active .faq-content {
-        max-height: 2000px; /* Duża wartość, aby pomieścić tekst */
-        transition: max-height 0.5s ease-in;
+        max-height: 3500px;
+        transition: max-height 0.6s ease-in;
       }
 
       .faq-item.active .faq-icon {
@@ -193,48 +200,56 @@
     <header>
       <h1>Morska Park – Głos Nabywców</h1>
       <p>
-        Oficjalna odpowiedź poszkodowanych na narrację i manipulacje NDI
-        Development Sp. z o.o.
+        Oficjalna odpowiedź wierzycieli i poszkodowanych na narrację deweloperów
+        oraz NDI Development Sp. z o.o.
       </p>
     </header>
 
     <div class="container">
       <section class="manifesto">
-        <h2>Oświadczenie Nabywców: To nie są merytoryczne rozmowy</h2>
+        <h2>Oświadczenie Nabywców: Zorganizowany proceder i iluzja „pomocy”</h2>
         <p>
-          Jako nabywcy mieszkań i wierzyciele inwestycji Morska Park Sp. z o.o.
-          czujemy się zmuszeni publicznie zdemaskować tzw. "wspierające"
-          działania spółki NDI Development. Rozmowy, które miały być
-          merytoryczne, stały się grą na zwłokę i próbą pozbawienia nas dorobku
-          życia.
+          Jako nabywcy mieszkań i prawowici wierzyciele inwestycji Morska Park
+          Sp. z o.o. kategorycznie odrzucamy narrację spółki NDI Development.
+          Rozmowy z nami nie mają na celu uratowania naszych mieszkań, lecz
+          stanowią cyniczną grę na zwłokę, mającą na celu wywłaszczenie nas z
+          naszych majątków.
         </p>
         <p>
-          <strong
-            >Byliśmy blisko wypracowania finalnego porozumienia i ugody,
-            zakładającej dopłatę w granicach 2900 zł/m². Nagle NDI bez podania
-            przyczyn wyrzuciło tę ofertę do kosza.</strong
-          >
-          Zamiast tego zaproponowano nam absurdalny "odkup" mieszkań za 80%
-          wartości z dnia zakupu sprzed kilku lat – co w dobie gigantycznej
-          inflacji i wzrostu cen nieruchomości oznacza dla nas potężną stratę
-          finansową i brak dachu nad głową.
+          Byliśmy o krok od wypracowania ugody (zakładającej dopłaty rzędu 2900
+          zł/m²), która gwarantowała ukończenie inwestycji. NDI nieoczekiwanie
+          wyrzuciło te ustalenia do kosza, proponując nam upokarzający odkup
+          mieszkań za 80% wartości historycznej (z dnia zakupu) – co przy
+          obecnej inflacji oznacza dla nas ruinę.
         </p>
         <p>
-          NDI nie działa bezinteresownie z "dobroci serca". Ich zaangażowanie to
-          chłodna kalkulacja.
+          Prawda jest taka, że
           <strong
-            >Spółka podpisała umowę na mocy której jednym z warunków realizacji
-            gigantycznej, wielomilionowej inwestycji Międzytorze w Gdyni jest
-            doprowadzenie do finalizacji projektu Morska Park.</strong
+            >dramat Morska Park to efekt celowego drenażu finansowego</strong
+          >. Inwestycja była prowadzona przez Grupę Semeko (SGI) w modelu spółek
+          celowych, gdzie pieniądze wpłacane przez nas transferowano do
+          spółki-matki i powiązanego z nią generalnego wykonawcy (kontrolowanych
+          przez tę samą rodzinę). Środki te znikały z budowy, co doprowadziło do
+          zatrzymania prac i dewastacji obiektu.
+        </p>
+        <p>
+          Dlaczego włączyło się NDI? Nie z dobrego serca.
+          <strong
+            >Zaangażowanie NDI jest bezpośrednim warunkiem przejęcia
+            gigantycznego, wartego setki milionów złotych projektu "Międzytorze"
+            w Gdyni.</strong
           >
-          Sprzątają ten bałagan tylko dlatego, że bez tego stracą kontrakt
-          stulecia w centrum miasta. Poniżej przedstawiamy konfrontację ich
-          oficjalnych zapewnień z brutalną rzeczywistością.
+          Zamiast zapłacić rynkową cenę za Międzytorze (co pozwoliłoby dokończyć
+          Morską Park), przeprowadzono inżynierię finansową, umarzając udziały
+          starego dewelopera, a NDI przejęło kontrolę, zobowiązując się w zamian
+          „posprzątać” problem Morska Park. Dziś NDI próbuje to zrobić
+          najtańszym kosztem – naszym kosztem.
         </p>
       </section>
 
       <h2 class="faq-title">KONTRA-FAQ: Obnażamy oficjalne stanowisko NDI</h2>
 
+      <!-- PYTANIE 1 -->
       <div class="faq-item">
         <div class="faq-header">
           <h3>
@@ -248,29 +263,38 @@
             <div class="box-ndi">
               <h4>Stanowisko NDI:</h4>
               <p>
-                NDI zaangażowała się jako podmiot wspierający poszukiwanie
-                rozwiązania. Podkreśla, że jest jedynie wierzycielem, nie
-                wykonawcą ani stroną umów i nie ponosi odpowiedzialności za
-                decyzje wcześniejszego inwestora.
+                NDI twierdzi, że zaangażowała się jedynie jako podmiot
+                wspierający. Zaznaczają, że występują wyłącznie w roli
+                wierzyciela, nie są stroną umów deweloperskich i nie ponoszą
+                odpowiedzialności za błędy poprzednika.
               </p>
             </div>
             <div class="box-nabywcy">
               <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
               <p>
-                NDI próbuje uciekać od odpowiedzialności deweloperskiej, kreując
-                się na "neutralnego doradcę". W rzeczywistości ich zaangażowanie
-                jest bezpośrednio powiązane z inną, gigantyczną inwestycją –
-                <strong>Międzytorzem w Gdyni</strong>. NDI podpisało umowę,
-                która zobowiązuje ich do rozwiązania problemu Morska Park, aby
-                móc realizować zyskowne plany w centrum Gdyni. To nie pomoc, to
-                czysty interes biznesowy i realizacja warunku koniecznego do
-                odblokowania kolejnych milionów.
+                NDI ukrywa faktyczny mechanizm swojego zaangażowania. Nie
+                pojawili się tu przypadkowo. Aby nie figurować bezpośrednio w
+                dokumentach, operacja została przeprowadzona przez „słupa” –
+                utworzono nową spółkę celową z kapitałem 5000 zł, w której
+                udziały objął figurant, by następnie zastawić je na rzecz NDI
+                Development.
+              </p>
+              <p>
+                To ta nowo powołana za pieniądze NDI spółka odkupiła od
+                VeloBanku potężną wierzytelność hipoteczną oraz 100% udziałów w
+                Morska Park sp. z o.o. NDI kontroluje zatem projekt, zlecając to
+                powiązanym podmiotom. To nie jest „wsparcie” – to realizacja
+                transakcji wiązanej za przejęcie projektu Międzytorze. Zresztą
+                samo NDI finansuje wynagrodzenie obecnego nadzorcy sądowego w
+                postępowaniu restrukturyzacyjnym (PPU), co stawia pod wielkim
+                znakiem zapytania obiektywizm całego procesu.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- PYTANIE 2 -->
       <div class="faq-item">
         <div class="faq-header">
           <h3>
@@ -284,29 +308,41 @@
             <div class="box-ndi">
               <h4>Stanowisko NDI:</h4>
               <p>
-                Twierdzą, że zdecydowali się zaangażować, bo widzieli w nim
-                projekt możliwy do uratowania i chcą doprowadzić do rozwiązania,
-                które zakończy sytuację dla wszystkich stron. Nazywają to swoim
-                "wkładem w naprawę niezwykle trudnej sytuacji".
+                Deklarują, że zaangażowali środki i kompetencje, bo "widzieli
+                projekt możliwy do uratowania" oraz chcą doprowadzić do
+                rozwiązania, które "zakończy sytuację dla wszystkich stron" i
+                jest to ich wkład w naprawę sytuacji z którą nie mieli nic
+                wspólnego.
               </p>
             </div>
             <div class="box-nabywcy">
               <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
               <p>
-                Gdyby NDI naprawdę chciało "rozwiązania dla wszystkich stron",
-                nie zrywałoby nagle zaawansowanych rozmów ugodowych. Byliśmy o
-                krok od konsensusu i akceptacji dopłat na poziomie ok. 2900
-                zł/m². Zamiast sfinalizować umowę, NDI brutalnie zerwało
-                negocjacje i przedstawiło upokarzającą propozycję odkupu lokali
-                za 80% ceny z dnia zakupu sprzed lat. Przy obecnych cenach na
-                rynku, za te pieniądze nie kupimy nawet połowy analogicznego
-                mieszkania. NDI chce nas "wyczyścić" z inwestycji tanim kosztem.
+                Gdyby NDI dążyło do rozwiązania dla wszystkich stron, nie
+                zrywałoby porozumienia o dopłatach 2900 zł/m², na które byliśmy
+                gotowi przystać. Zamiast tego zaoferowali nam zwrot 80%
+                wpłaconych przed laty środków.
+              </p>
+              <p>
+                Faktyczny powód wejścia NDI jest inny: w 2023 r. poprzedni
+                deweloper (Grupa Semeko) miał tylko jedno wysokowartościowe
+                aktywo mogące pokryć straty – udziały w gigantycznym projekcie
+                Międzytorze (oczekiwana EBIDTA 500-600 mln zł). Przejęcie
+                Międzytorza w 2025 roku przez NDI odbyło się w mechanizmie
+                bezgotówkowym (umorzenie udziałów SGI bez wynagrodzenia,
+                dokapitalizowanie przez NDI). W ten sposób do dewelopera nie
+                trafiły środki, które uratowałyby naszą budowę. W zamian za tak
+                intratny układ przy Międzytorzu, NDI zobowiązało się dokończyć
+                budowę Morskiej Park i opłacić postępowania restrukturyzacyjne.
+                Teraz wycofują się z obietnic danych nabywcom, dążąc
+                prawdopodobnie do szybkiej sprzedaży z zyskiem.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- PYTANIE 3 -->
       <div class="faq-item">
         <div class="faq-header">
           <h3>3. Co NDI Development Sp. z o.o. już zrobiła?</h3>
@@ -317,29 +353,44 @@
             <div class="box-ndi">
               <h4>Stanowisko NDI:</h4>
               <p>
-                Chwalą się zabezpieczeniem terenu budowy, zatrzymaniem
-                upadłości, przeprowadzeniem analiz prawnych i technicznych oraz
-                uzyskaniem zamiennego pozwolenia na budowę (PnB) i nowym
-                dziennikiem budowy.
+                NDI chwali się zabezpieczeniem budowy, zatrzymaniem upadłości,
+                uporządkowaniem stanu prawnego oraz załatwieniem nowego
+                (zamiennego) pozwolenia na budowę.
               </p>
             </div>
             <div class="box-nabywcy">
               <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
               <p>
-                Wszystkie te kroki (w tym zamienne PnB) NDI wykonało nie dla
-                nas, ale pod własny plan przejęcia i kontroli nad inwestycją.
-                Przygotowali grunt prawny i techniczny, a gdy zorientowali się,
-                że projekt jest "czysty" i gotowy do wznowienia w 2026 roku,
-                postanowili pozbyć się dotychczasowych nabywców za ułamek
-                wartości (oferta 80% ceny sprzed lat), by prawdopodobnie
-                sprzedać wybudowane mieszkania ponownie – tym razem po obecnych,
-                drastycznie wyższych cenach rynkowych.
+                Prawda o stanie budowy, który NDI teraz „bohatersko ratuje”,
+                jest przerażająca. Poprzedni zarząd doprowadził do dramatu:
+              </p>
+              <ul>
+                <li>
+                  Od maja do grudnia 2024 r. celowo zrezygnowano z ochrony
+                  obiektu oraz nie przedłużono ubezpieczenia (polisy CAR).
+                </li>
+                <li>
+                  Pozwolono na gigantyczną, zorganizowaną kradzież (wycięto
+                  m.in. całą instalację elektryczną i wod-kan) i rozkradzenie
+                  zmagazynowanych materiałów. Na terenie budowy istniało
+                  obozowisko złodziei. Zarząd nawet tego nie zgłosił (sprawy
+                  karne wszczęto po doniesieniach osób trzecich).
+                </li>
+                <li>"Zgubiono" dziennik budowy.</li>
+              </ul>
+              <p>
+                NDI zabezpieczyło teren dopiero po podpisaniu umowy warunkującej
+                przejęcie kontroli (grudzień 2024). Nowe pozwolenie zamienne nie
+                służy nabywcom, lecz układowi – wprowadza m.in. likwidację
+                sprzedanych już wcześniej lokali usługowych na rzecz
+                optymalizacji projektu pod nowego inwestora.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- PYTANIE 4 -->
       <div class="faq-item">
         <div class="faq-header">
           <h3>4. Dlaczego nie można po prostu wznowić budowy?</h3>
@@ -350,34 +401,48 @@
             <div class="box-ndi">
               <h4>Stanowisko NDI:</h4>
               <p>
-                Projekt wymaga oceny kosztów i przejęcia odpowiedzialności
-                technicznej za poprzedników. NDI twierdzi, że potencjalni
-                wykonawcy rezygnują z powodu ryzyka i braku bezpiecznego,
-                gwarantowanego finansowania.
+                Twierdzą, że projekt wymaga analiz kosztów, ryzyka technicznego,
+                a brak jest „bezpiecznego i gwarantowanego finansowania”, co
+                odstrasza wykonawców.
               </p>
             </div>
             <div class="box-nabywcy">
               <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
               <p>
-                Finansowanie i wykonawca by się znaleźli, gdyby NDI nie
-                torpedowało wypracowanego porozumienia z nami. Byliśmy gotowi na
-                merytoryczne dopłaty (ok. 2900 zł/m²), co gwarantowało potężny
-                zastrzyk gotówki na dokończenie budowy. Prawdziwym powodem braku
-                wznowienia prac jest to, że NDI sztucznie blokuje proces, licząc
-                na to, że zmęczeni i zastraszeni wizją upadłości nabywcy oddadzą
-                swoje prawa do lokali za bezcen.
+                Finansowanie i dopłaty z naszej strony (2900 zł/m²) były na
+                stole, ale NDI samo to odrzuciło. Wstrzymanie budowy w kwietniu
+                2024 r. nie było efektem "niespodziewanych ryzyk", ale
+                systemowego drenażu kapitału. Z kont budowy zniknęły ogromne
+                kwoty:
+              </p>
+              <ul>
+                <li>
+                  W czerwcu 2024 r. – gdy budowa całkowicie stała – spółka
+                  przelała do spółki-matki ponad 1,6 miliona złotych tytułem
+                  "zaliczki na poczet robót".
+                </li>
+                <li>
+                  Wyprowadzano pieniądze poprzez fikcyjne porozumienia (np.
+                  przyjęcie absurdalnego długu generalnego wykonawcy względem
+                  firmy od dźwigów) czy akty notarialne na lokale ze zrolowanym
+                  terminem płatności dla powiązanych figurantów i spółek.
+                </li>
+              </ul>
+              <p>
+                NDI nie chce wznowić budowy na zasadach sprawiedliwych dla
+                nabywców. Ich plan to pozbycie się nas (za 80% wartości z lat
+                ubiegłych), "wyczyszczenie" ksiąg wieczystych i sprzedaż lokali
+                po dzisiejszych cenach rynkowych.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- PYTANIE 5 -->
       <div class="faq-item">
         <div class="faq-header">
-          <h3>
-            5. Co jest celem udziału NDI Development Sp. z o.o. w rozmowach
-            nabywców i wierzycieli?
-          </h3>
+          <h3>5. Skąd może wynikać potrzeba dopłat?</h3>
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-content">
@@ -385,55 +450,34 @@
             <div class="box-ndi">
               <h4>Stanowisko NDI:</h4>
               <p>
-                "Celem jest wypracowanie rozwiązania, które będzie realne,
-                możliwe do sfinansowania i akceptowalne dla wszystkich
-                uczestników postępowania."
+                Koszty tłumaczą makroekonomią: skumulowaną inflacją 45% (lata
+                2020-2024), cenami stali, paliw, pracy, brakiem gwarancji na
+                wcześniejsze etapy.
               </p>
             </div>
             <div class="box-nabywcy">
               <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
               <p>
-                To puste, PR-owe hasełko. Oferta odkupu na poziomie 80%
-                historycznej wartości NIE JEST akceptowalna dla nabywców. Ich
-                realnym celem jest maksymalizacja własnego zysku z pominięciem
-                interesu społecznego oraz "odhaczenie" problemu Morska Park
-                przed władzami miasta, by zabezpieczyć swoje interesy i kontrakt
-                na terenie Międzytorza.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-header">
-          <h3>6. Skąd może wynikać potrzeba dopłat?</h3>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-content">
-          <div class="faq-body">
-            <div class="box-ndi">
-              <h4>Stanowisko NDI:</h4>
-              <p>
-                Tłumaczą potrzebę dopłat wzrostem cen stali, paliw, inflacją
-                (ok. 45% w latach 2020-2024) oraz kosztami ryzyka technicznego,
-                które musi ponieść nowy wykonawca.
-              </p>
-            </div>
-            <div class="box-nabywcy">
-              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
-              <p>
-                Rozumiemy realia rynkowe i inflację –
+                Doskonale rozumiemy czynniki makroekonomiczne.
                 <strong
-                  >właśnie dlatego jako nabywcy zgodziliśmy się na gigantyczny
-                  kompromis i dopłaty w wysokości blisko 2900 zł/m²!</strong
+                  >Właśnie z ich powodu zgodziliśmy się na gigantyczne
+                  kompromisy i wyższe dopłaty (ok. 2900 zł/m²), co dawało pełne
+                  pokrycie kosztów!</strong
                 >
-                Wykazaliśmy się pełnym zrozumieniem sytuacji gospodarczej.
-                Dlaczego więc, skoro zgadzaliśmy się na pokrycie tych
-                zwiększonych kosztów, NDI nagle wycofało tę opcję i żąda, abyśmy
-                oddali mieszkania za ułamek dzisiejszej wartości? Odpowiedź jest
-                prosta: na wzroście wartości tych mieszkań NDI chce zarobić
-                samo, zostawiając nas z niczym.
+              </p>
+              <p>
+                Jednak braki w kasie to nie tylko inflacja. To ewidentny efekt
+                przeprowadzania transakcji na niekorzyść spółki. Deweloper
+                sprzedał ponad 85% mieszkań. Pieniądze powinny być na koncie,
+                ale z dokumentacji finansowej i wyciągów (o które musieliśmy
+                toczyć batalię z nadzorcą sądowym opłacanym przez NDI) wynika,
+                że dochodziło do pobierania środków niezgodnie z postępem prac
+                (dzięki specjalnym zapisom o zaliczkach). Zamiast ścigać winnych
+                z majątku (spółki-matki i zarządu, którzy w grudniu 2024
+                podpisali obustronne zrzeczenie się roszczeń!), NDI chce, byśmy
+                to my – ofiary zorganizowanego procederu – oddali mieszkania za
+                bezcen. To nie jest restrukturyzacja, to wrogie przejęcie
+                kosztem zwykłych ludzi.
               </p>
             </div>
           </div>
@@ -444,7 +488,7 @@
     <footer>
       <p>
         &copy; 2026 Stowarzyszenie Nabywców Lokali Inwestycji Morska Park. Nie
-        damy się wysiedlić ani oszukać.
+        pozwolimy zatuszować prawdy ani wywłaszczyć nas z naszych mieszkań.
       </p>
     </footer>
 
@@ -453,14 +497,12 @@
         header.addEventListener("click", () => {
           const item = header.parentElement;
 
-          // Zamknij inne sekcje (opcjonalne, jeśli chcesz akordeon)
           document.querySelectorAll(".faq-item").forEach((otherItem) => {
             if (otherItem !== item) {
               otherItem.classList.remove("active");
             }
           });
 
-          // Przełącz klasę active dla klikniętego elementu
           item.classList.toggle("active");
         });
       });
