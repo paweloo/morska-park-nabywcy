@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morska Park Nabywcy - Prawda o inwestycji i działaniach NDI</title>
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --accent-color: #e74c3c;
+        --ndi-color: #7f8c8d;
+        --nabywcy-color: #27ae60;
+        --bg-color: #f8f9fa;
+        --text-color: #333;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: 0;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 5px solid var(--accent-color);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      .manifesto {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 40px;
+        border-left: 5px solid var(--accent-color);
+      }
+
+      .manifesto h2 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+      }
+
+      .manifesto p {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .faq-title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        font-size: 2rem;
+      }
+
+      /* Stylizacja Harmonijki (Accordion) */
+      .faq-item {
+        background: white;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        border: 1px solid #e1e8ed;
+      }
+
+      .faq-header {
+        background: #fff;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        transition: background 0.3s ease;
+      }
+
+      .faq-header:hover {
+        background: #f1f2f6;
+      }
+
+      .faq-header h3 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        padding-right: 20px;
+      }
+
+      .faq-icon {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--accent-color);
+        transition: transform 0.3s ease;
+      }
+
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: #fafafa;
+      }
+
+      .faq-body {
+        padding: 25px;
+        border-top: 1px solid #e1e8ed;
+      }
+
+      /* Sekcje odpowiedzi wewnątrz FAQ */
+      .box-ndi {
+        background-color: #f1f2f6;
+        border-left: 4px solid var(--ndi-color);
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .box-ndi h4 {
+        color: #57606f;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+      }
+
+      .box-nabywcy {
+        background-color: #ebf7ee;
+        border-left: 4px solid var(--nabywcy-color);
+        padding: 15px 20px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .box-nabywcy h4 {
+        color: var(--nabywcy-color);
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+      }
+
+      /* Klasa aktywna dla rozwijania */
+      .faq-item.active .faq-content {
+        max-height: 2000px; /* Duża wartość, aby pomieścić tekst */
+        transition: max-height 0.5s ease-in;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        margin-top: 50px;
+        background: var(--primary-color);
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        .faq-header h3 {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Morska Park – Głos Nabywców</h1>
+      <p>
+        Oficjalna odpowiedź poszkodowanych na narrację i manipulacje NDI
+        Development Sp. z o.o.
+      </p>
+    </header>
+
+    <div class="container">
+      <section class="manifesto">
+        <h2>Oświadczenie Nabywców: To nie są merytoryczne rozmowy</h2>
+        <p>
+          Jako nabywcy mieszkań i wierzyciele inwestycji Morska Park Sp. z o.o.
+          czujemy się zmuszeni publicznie zdemaskować tzw. "wspierające"
+          działania spółki NDI Development. Rozmowy, które miały być
+          merytoryczne, stały się grą na zwłokę i próbą pozbawienia nas dorobku
+          życia.
+        </p>
+        <p>
+          <strong
+            >Byliśmy blisko wypracowania finalnego porozumienia i ugody,
+            zakładającej dopłatę w granicach 2900 zł/m². Nagle NDI bez podania
+            przyczyn wyrzuciło tę ofertę do kosza.</strong
+          >
+          Zamiast tego zaproponowano nam absurdalny "odkup" mieszkań za 80%
+          wartości z dnia zakupu sprzed kilku lat – co w dobie gigantycznej
+          inflacji i wzrostu cen nieruchomości oznacza dla nas potężną stratę
+          finansową i brak dachu nad głową.
+        </p>
+        <p>
+          NDI nie działa bezinteresownie z "dobroci serca". Ich zaangażowanie to
+          chłodna kalkulacja.
+          <strong
+            >Spółka podpisała umowę na mocy której jednym z warunków realizacji
+            gigantycznej, wielomilionowej inwestycji Międzytorze w Gdyni jest
+            doprowadzenie do finalizacji projektu Morska Park.</strong
+          >
+          Sprzątają ten bałagan tylko dlatego, że bez tego stracą kontrakt
+          stulecia w centrum miasta. Poniżej przedstawiamy konfrontację ich
+          oficjalnych zapewnień z brutalną rzeczywistością.
+        </p>
+      </section>
+
+      <h2 class="faq-title">KONTRA-FAQ: Obnażamy oficjalne stanowisko NDI</h2>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>
+            1. Jaka jest rola NDI Development Sp. z o.o. w projekcie Morska Park
+            Sp. z o.o.?
+          </h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                NDI zaangażowała się jako podmiot wspierający poszukiwanie
+                rozwiązania. Podkreśla, że jest jedynie wierzycielem, nie
+                wykonawcą ani stroną umów i nie ponosi odpowiedzialności za
+                decyzje wcześniejszego inwestora.
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                NDI próbuje uciekać od odpowiedzialności deweloperskiej, kreując
+                się na "neutralnego doradcę". W rzeczywistości ich zaangażowanie
+                jest bezpośrednio powiązane z inną, gigantyczną inwestycją –
+                <strong>Międzytorzem w Gdyni</strong>. NDI podpisało umowę,
+                która zobowiązuje ich do rozwiązania problemu Morska Park, aby
+                móc realizować zyskowne plany w centrum Gdyni. To nie pomoc, to
+                czysty interes biznesowy i realizacja warunku koniecznego do
+                odblokowania kolejnych milionów.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>
+            2. Kim w projekcie jest NDI Development i dlaczego zdecydowali się
+            zaangażować?
+          </h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                Twierdzą, że zdecydowali się zaangażować, bo widzieli w nim
+                projekt możliwy do uratowania i chcą doprowadzić do rozwiązania,
+                które zakończy sytuację dla wszystkich stron. Nazywają to swoim
+                "wkładem w naprawę niezwykle trudnej sytuacji".
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                Gdyby NDI naprawdę chciało "rozwiązania dla wszystkich stron",
+                nie zrywałoby nagle zaawansowanych rozmów ugodowych. Byliśmy o
+                krok od konsensusu i akceptacji dopłat na poziomie ok. 2900
+                zł/m². Zamiast sfinalizować umowę, NDI brutalnie zerwało
+                negocjacje i przedstawiło upokarzającą propozycję odkupu lokali
+                za 80% ceny z dnia zakupu sprzed lat. Przy obecnych cenach na
+                rynku, za te pieniądze nie kupimy nawet połowy analogicznego
+                mieszkania. NDI chce nas "wyczyścić" z inwestycji tanim kosztem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>3. Co NDI Development Sp. z o.o. już zrobiła?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                Chwalą się zabezpieczeniem terenu budowy, zatrzymaniem
+                upadłości, przeprowadzeniem analiz prawnych i technicznych oraz
+                uzyskaniem zamiennego pozwolenia na budowę (PnB) i nowym
+                dziennikiem budowy.
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                Wszystkie te kroki (w tym zamienne PnB) NDI wykonało nie dla
+                nas, ale pod własny plan przejęcia i kontroli nad inwestycją.
+                Przygotowali grunt prawny i techniczny, a gdy zorientowali się,
+                że projekt jest "czysty" i gotowy do wznowienia w 2026 roku,
+                postanowili pozbyć się dotychczasowych nabywców za ułamek
+                wartości (oferta 80% ceny sprzed lat), by prawdopodobnie
+                sprzedać wybudowane mieszkania ponownie – tym razem po obecnych,
+                drastycznie wyższych cenach rynkowych.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>4. Dlaczego nie można po prostu wznowić budowy?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                Projekt wymaga oceny kosztów i przejęcia odpowiedzialności
+                technicznej za poprzedników. NDI twierdzi, że potencjalni
+                wykonawcy rezygnują z powodu ryzyka i braku bezpiecznego,
+                gwarantowanego finansowania.
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                Finansowanie i wykonawca by się znaleźli, gdyby NDI nie
+                torpedowało wypracowanego porozumienia z nami. Byliśmy gotowi na
+                merytoryczne dopłaty (ok. 2900 zł/m²), co gwarantowało potężny
+                zastrzyk gotówki na dokończenie budowy. Prawdziwym powodem braku
+                wznowienia prac jest to, że NDI sztucznie blokuje proces, licząc
+                na to, że zmęczeni i zastraszeni wizją upadłości nabywcy oddadzą
+                swoje prawa do lokali za bezcen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>
+            5. Co jest celem udziału NDI Development Sp. z o.o. w rozmowach
+            nabywców i wierzycieli?
+          </h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                "Celem jest wypracowanie rozwiązania, które będzie realne,
+                możliwe do sfinansowania i akceptowalne dla wszystkich
+                uczestników postępowania."
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                To puste, PR-owe hasełko. Oferta odkupu na poziomie 80%
+                historycznej wartości NIE JEST akceptowalna dla nabywców. Ich
+                realnym celem jest maksymalizacja własnego zysku z pominięciem
+                interesu społecznego oraz "odhaczenie" problemu Morska Park
+                przed władzami miasta, by zabezpieczyć swoje interesy i kontrakt
+                na terenie Międzytorza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>6. Skąd może wynikać potrzeba dopłat?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <div class="faq-body">
+            <div class="box-ndi">
+              <h4>Stanowisko NDI:</h4>
+              <p>
+                Tłumaczą potrzebę dopłat wzrostem cen stali, paliw, inflacją
+                (ok. 45% w latach 2020-2024) oraz kosztami ryzyka technicznego,
+                które musi ponieść nowy wykonawca.
+              </p>
+            </div>
+            <div class="box-nabywcy">
+              <h4>Odpowiedź Nabywców (Rzeczywistość):</h4>
+              <p>
+                Rozumiemy realia rynkowe i inflację –
+                <strong
+                  >właśnie dlatego jako nabywcy zgodziliśmy się na gigantyczny
+                  kompromis i dopłaty w wysokości blisko 2900 zł/m²!</strong
+                >
+                Wykazaliśmy się pełnym zrozumieniem sytuacji gospodarczej.
+                Dlaczego więc, skoro zgadzaliśmy się na pokrycie tych
+                zwiększonych kosztów, NDI nagle wycofało tę opcję i żąda, abyśmy
+                oddali mieszkania za ułamek dzisiejszej wartości? Odpowiedź jest
+                prosta: na wzroście wartości tych mieszkań NDI chce zarobić
+                samo, zostawiając nas z niczym.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2026 Stowarzyszenie Nabywców Lokali Inwestycji Morska Park. Nie
+        damy się wysiedlić ani oszukać.
+      </p>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".faq-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const item = header.parentElement;
+
+          // Zamknij inne sekcje (opcjonalne, jeśli chcesz akordeon)
+          document.querySelectorAll(".faq-item").forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove("active");
+            }
+          });
+
+          // Przełącz klasę active dla klikniętego elementu
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
