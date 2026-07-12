@@ -44,7 +44,7 @@
     </nav>
 
     <div class="container">
-      <h1>Media o naszej sprawie</h1>
+      <h1 class="media-title">Media o naszej sprawie</h1>
 
       <div class="media-grid">
         <a
@@ -134,16 +134,18 @@
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobile-menu");
 
-      hamburger.addEventListener("click", () => {
-        mobileMenu.style.display =
-          mobileMenu.style.display === "flex" ? "none" : "flex";
+      hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("open");
+        hamburger.classList.toggle("open");
       });
 
       // Close mobile menu when clicking a link
       document.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", () => {
           if (window.innerWidth <= 768) {
-            mobileMenu.style.display = "none";
+            mobileMenu.classList.remove("open");
+            hamburger.classList.remove("open");
           }
         });
       });
@@ -154,14 +156,16 @@
           !mobileMenu.contains(event.target) &&
           !hamburger.contains(event.target)
         ) {
-          mobileMenu.style.display = "none";
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
         }
       });
 
       // Close mobile menu when resizing the window
       window.addEventListener("resize", () => {
         if (window.innerWidth > 768) {
-          mobileMenu.style.display = "none";
+          mobileMenu.classList.remove("open");
+          hamburger.classList.remove("open");
         }
       });
     </script>
