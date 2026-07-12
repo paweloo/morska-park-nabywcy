@@ -13,6 +13,8 @@
         --ndi-text: #444444;
         --nabywcy-bg: #e8f5e9;
         --nabywcy-title: #2e7d32;
+        --ndi-orange: #f15a24;
+        --ndi-red: #c8102e;
       }
 
       * {
@@ -31,6 +33,40 @@
         -webkit-font-smoothing: antialiased;
       }
 
+      .navbar {
+        width: 100%;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 20px 40px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+      }
+
+      .morska-brand {
+        font-size: 1.65rem;
+        font-weight: 600;
+        color: #2c2c2c;
+        letter-spacing: -0.6px;
+      }
+
+      .nabywcy-label {
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--ndi-orange);
+        letter-spacing: -0.3px;
+      }
+
       .container {
         max-width: 900px;
         margin: 0 auto;
@@ -43,15 +79,19 @@
       }
 
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.15rem;
         font-weight: 400;
         margin-bottom: 20px;
         color: #000;
+        text-align: center;
       }
 
       header p {
         font-size: 1.1rem;
         color: #555;
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto;
       }
 
       .manifesto {
@@ -233,6 +273,13 @@
     </style>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <div class="morska-brand">Morska Park</div>
+        <div class="nabywcy-label">Nabywcy</div>
+      </div>
+    </nav>
+
     <div class="container">
       <header>
         <h1>Sprawa Morska Park sp. z o.o. w pytaniach i odpowiedziach</h1>
