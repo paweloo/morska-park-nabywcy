@@ -53,6 +53,18 @@
         gap: 12px;
       }
 
+      .logo {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
       .morska-brand {
         font-size: 1.65rem;
         font-weight: 600;
@@ -268,10 +280,13 @@
         border-top: 1px solid var(--border-color);
       }
 
-      /* === Minimal Mobile Improvements === */
       @media (max-width: 768px) {
         .navbar {
           padding: 16px 20px;
+        }
+        .logo {
+          width: 42px;
+          height: 42px;
         }
         .morska-brand {
           font-size: 1.45rem;
@@ -307,6 +322,9 @@
   <body>
     <nav class="navbar">
       <div class="navbar-content">
+        <div class="logo">
+          <img src="morska-park-logo-top-left.png" alt="Morska Park Logo" />
+        </div>
         <div class="morska-brand">Morska Park</div>
         <div class="morska-divider">/</div>
         <div class="nabywcy-label">Nabywcy</div>
@@ -565,7 +583,16 @@
                   </li>
                 </ul>
                 <p>
-                  Uzyskane pod nadzorem podmiotów powiązanych zamienne
+                  Odnosząc się do deklarowanych przez NDI analiz technicznych,
+                  prawnych i finansowych, należy zaznaczyć, że spółka udostępnia
+                  te dokumenty niezwykle niechętnie, często dopiero pod wyraźnym
+                  przymusem i na skutek interwencji nadzorcy sądowego. Znaczna
+                  część z powoływanych analiz w dalszym ciągu nie została
+                  przedstawiona wierzycielom w sposób transparentny i
+                  prawidłowy.
+                </p>
+                <p>
+                  Z kolei uzyskane pod nadzorem podmiotów powiązanych zamienne
                   pozwolenie na budowę (PnB) wprowadza m.in. likwidację części
                   wcześniej sprzedanych lokali użytkowych. Działania te noszą
                   znamiona optymalizacji projektu pod kątem opłacalności dla
