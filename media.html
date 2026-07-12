@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media o sprawie Morska Park</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Brand -->
+        <div class="brand">
+          <div class="logo">
+            <img src="morska-park-logo-top-left.png" alt="Morska Park Logo" />
+          </div>
+          <div class="brand-text">
+            <div class="morska-brand">Morska Park</div>
+            <div class="nabywcy-label">Nabywcy</div>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Oświadczenie</a>
+          <a href="media.html" class="nav-link">Media</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="nav-link">Oświadczenie</a>
+        <a href="media.html" class="nav-link">Media</a>
+        <a href="kontakt.html" class="nav-link">Kontakt</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Media o naszej sprawie</h1>
+
+      <div class="media-grid">
+        <a
+          href="https://www.youtube.com/watch?v=dRYcf_Pjnsg"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">TVP / Panorama</div>
+          <div class="media-content">
+            <h3>Interwencja – Polsat News</h3>
+            <p>
+              Zapłacili za nowe mieszkania. Deweloper w długach, budowa stanęła.
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://interwencja.polsatnews.pl/reportaz/2026-07-03/zaplacili-za-nowe-mieszkania-deweloper-w-dlugach-budowa-stanela/"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">Polsat / Interwencja</div>
+          <div class="media-content">
+            <h3>Zapłacili za mieszkania – deweloper w długach</h3>
+            <p>Budowa Morska Park stanęła.</p>
+          </div>
+        </a>
+
+        <a
+          href="https://dziennikbaltycki.pl/kontrowersje-osiedla-morska-park-w-gdyni-niepewna-przyszlosc-nabywcow-mieszkan/ar/c1p2-29134155"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">Dziennik Bałtycki</div>
+          <div class="media-content">
+            <h3>Kontrowersje osiedla Morska Park w Gdyni</h3>
+            <p>Niepewna przyszłość nabywców mieszkań.</p>
+          </div>
+        </a>
+
+        <a
+          href="https://wyborcza.biz/biznes/7,147758,32885209,mialo-byc-bezpieczne-osiedle-dewelopera-od-aquaparku-jest-uziemiona.html"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">Wyborcza.biz</div>
+          <div class="media-content">
+            <h3>Miało być bezpieczne osiedle dewelopera</h3>
+            <p>Jest uziemiona inwestycja.</p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.trojmiasto.pl/dom/Wiezowiec-niedokonczony-Czekaja-na-mieszkania-35-roku-n221023.html"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">trojmiasto.pl</div>
+          <div class="media-content">
+            <h3>Wieżowiec niedokończony</h3>
+            <p>Czekają na mieszkania 3,5 roku.</p>
+          </div>
+        </a>
+
+        <a
+          href="https://gdynia.naszemiasto.pl/dramat-ponad-stu-rodzin-mieli-miec-mieszkania-zostali-z-niczym-prosza-wladze-gdyni-o-pomoc-prezydent-obiecuje-spotkanie/ar/c9p2-29160797"
+          target="_blank"
+          class="media-card"
+        >
+          <div class="media-type">Nasze Miasto Gdynia</div>
+          <div class="media-content">
+            <h3>Dramat ponad stu rodzin</h3>
+            <p>Proszą władze Gdyni o pomoc.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2026 Nabywcy lokali i wierzyciele inwestycji Morska Park. Serwis
+        ma charakter informacyjny i opiera się na analizie dostępnej
+        dokumentacji prawnej i księgowej.
+      </p>
+    </footer>
+
+    <script>
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.style.display =
+          mobileMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            mobileMenu.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

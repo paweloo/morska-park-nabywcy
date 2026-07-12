@@ -4,330 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sprawa Morska Park sp. z o.o. w pytaniach i odpowiedziach</title>
-    <style>
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #333333;
-        --border-color: #eaeaea;
-        --ndi-bg: #f5f5f5;
-        --ndi-text: #444444;
-        --nabywcy-bg: #e8f5e9;
-        --nabywcy-title: #2e7d32;
-        --ndi-orange: #f15a24;
-        --ndi-red: #c8102e;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        line-height: 1.8;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .navbar {
-        width: 100%;
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        padding: 20px 40px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .navbar-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 12px;
-      }
-
-      .logo {
-        width: 48px;
-        height: 48px;
-        flex-shrink: 0;
-      }
-
-      .logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      .morska-brand {
-        font-size: 1.65rem;
-        font-weight: 600;
-        color: #2c2c2c;
-        letter-spacing: -0.6px;
-      }
-
-      .morska-divider {
-        font-size: 1.65rem;
-        color: #2c2c2c;
-        margin: 0;
-      }
-
-      .nabywcy-label {
-        font-size: 1.35rem;
-        font-weight: 500;
-        color: var(--ndi-orange);
-        letter-spacing: -0.3px;
-      }
-
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 80px 20px 60px;
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      header h1 {
-        font-size: 2.15rem;
-        font-weight: 400;
-        margin-bottom: 20px;
-        color: #000;
-        text-align: center;
-      }
-
-      header p {
-        font-size: 1.1rem;
-        color: #555;
-        text-align: center;
-        max-width: 720px;
-        margin: 0 auto;
-      }
-
-      .manifesto {
-        margin-bottom: 80px;
-      }
-
-      .manifesto h2 {
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 30px;
-        color: #000;
-      }
-
-      .manifesto p {
-        margin-bottom: 20px;
-        font-size: 1.05rem;
-        text-align: justify;
-      }
-
-      .faq-section {
-        margin-top: 40px;
-      }
-
-      .faq-title {
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 30px;
-        color: #000;
-      }
-
-      .faq-item {
-        border-top: 1px solid var(--border-color);
-      }
-
-      .faq-item:last-child {
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .faq-header {
-        padding: 25px 0;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        user-select: none;
-        background: transparent;
-      }
-
-      .faq-header:hover h3 {
-        color: #000;
-      }
-
-      .faq-header h3 {
-        font-size: 1.1rem;
-        font-weight: 400;
-        color: var(--text-color);
-        padding-right: 20px;
-        margin: 0;
-        transition: color 0.2s;
-      }
-
-      .faq-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease;
-      }
-
-      .faq-icon svg {
-        width: 16px;
-        height: 16px;
-        fill: none;
-        stroke: #333;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .faq-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out;
-      }
-
-      .faq-body {
-        padding-bottom: 30px;
-      }
-
-      .box-ndi {
-        background-color: var(--ndi-bg);
-        padding: 25px;
-        margin-bottom: 20px;
-        border-radius: 4px;
-      }
-
-      .box-ndi h4 {
-        color: #000;
-        margin-bottom: 15px;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-      }
-
-      .box-ndi p {
-        color: var(--ndi-text);
-        margin-bottom: 15px;
-      }
-
-      .box-ndi ul {
-        margin-left: 20px;
-        margin-bottom: 15px;
-        color: var(--ndi-text);
-      }
-
-      .box-nabywcy {
-        background-color: var(--nabywcy-bg);
-        padding: 25px;
-        border-radius: 4px;
-      }
-
-      .box-nabywcy h4 {
-        color: var(--nabywcy-title);
-        margin-bottom: 15px;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-      }
-
-      .box-nabywcy p {
-        margin-bottom: 15px;
-        text-align: justify;
-      }
-
-      .box-nabywcy ul {
-        margin-left: 20px;
-        margin-bottom: 15px;
-      }
-
-      .box-nabywcy li,
-      .box-ndi li {
-        margin-bottom: 8px;
-      }
-
-      .box-nabywcy p:last-child,
-      .box-ndi p:last-child,
-      .box-ndi ul:last-child {
-        margin-bottom: 0;
-      }
-
-      .faq-item.active .faq-content {
-        max-height: 3000px;
-        transition: max-height 0.6s ease-in;
-      }
-
-      .faq-item.active .faq-icon {
-        transform: rotate(180deg);
-      }
-
-      footer {
-        text-align: center;
-        padding: 40px 20px;
-        margin-top: 60px;
-        color: #888;
-        font-size: 0.9rem;
-        border-top: 1px solid var(--border-color);
-      }
-
-      @media (max-width: 768px) {
-        .navbar {
-          padding: 16px 20px;
-        }
-        .logo {
-          width: 42px;
-          height: 42px;
-        }
-        .morska-brand {
-          font-size: 1.45rem;
-        }
-        .morska-divider {
-          font-size: 1.45rem;
-        }
-        .nabywcy-label {
-          font-size: 1.25rem;
-        }
-        .container {
-          padding: 50px 20px 60px;
-        }
-        header h1 {
-          font-size: 1.75rem;
-          line-height: 1.3;
-        }
-        header p {
-          font-size: 1.05rem;
-        }
-        .faq-header h3 {
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        header h1 {
-          font-size: 1.6rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
-      <div class="navbar-content">
-        <div class="logo">
-          <img src="morska-park-logo-top-left.png" alt="Morska Park Logo" />
+      <div class="navbar-container">
+        <!-- Brand -->
+        <div class="brand">
+          <div class="logo">
+            <img src="morska-park-logo-top-left.png" alt="Morska Park Logo" />
+          </div>
+          <div class="brand-text">
+            <div class="morska-brand">Morska Park</div>
+            <div class="nabywcy-label">Nabywcy</div>
+          </div>
         </div>
-        <div class="morska-brand">Morska Park</div>
-        <div class="morska-divider">/</div>
-        <div class="nabywcy-label">Nabywcy</div>
+
+        <!-- Desktop Menu -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Oświadczenie</a>
+          <a href="media.html" class="nav-link">Media</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="nav-link">Oświadczenie</a>
+        <a href="media.html" class="nav-link">Media</a>
+        <a href="kontakt.html" class="nav-link">Kontakt</a>
       </div>
     </nav>
 
@@ -811,6 +523,25 @@
     </footer>
 
     <script>
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.style.display =
+          mobileMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            mobileMenu.style.display = "none";
+          }
+        });
+      });
+
+      // FAQ
       document.querySelectorAll(".faq-header").forEach((header) => {
         header.addEventListener("click", () => {
           const item = header.parentElement;

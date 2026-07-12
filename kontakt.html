@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt w sprawie Morska Park</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Brand -->
+        <div class="brand">
+          <div class="logo">
+            <img src="morska-park-logo-top-left.png" alt="Morska Park Logo" />
+          </div>
+          <div class="brand-text">
+            <div class="morska-brand">Morska Park</div>
+            <div class="nabywcy-label">Nabywcy</div>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Oświadczenie</a>
+          <a href="media.html" class="nav-link">Media</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="nav-link">Oświadczenie</a>
+        <a href="media.html" class="nav-link">Media</a>
+        <a href="kontakt.html" class="nav-link">Kontakt</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="contact-section" id="kontakt">
+        <h1>
+          Chcesz nagłośnić naszą sprawę lub masz informacje o inwestycji Morska
+          Park, które mogą pomóc nabywcom?
+        </h1>
+        <div class="contact-box">
+          <p>Napisz do nas na adres:</p>
+          <p class="contact-email">gr.morskapark@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2026 Nabywcy lokali i wierzyciele inwestycji Morska Park. Serwis
+        ma charakter informacyjny i opiera się na analizie dostępnej
+        dokumentacji prawnej i księgowej.
+      </p>
+    </footer>
+
+    <script>
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.style.display =
+          mobileMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            mobileMenu.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
