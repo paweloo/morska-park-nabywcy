@@ -754,13 +754,6 @@
       document.querySelectorAll(".faq-header").forEach((header) => {
         header.addEventListener("click", () => {
           const item = header.parentElement;
-
-          document.querySelectorAll(".faq-item").forEach((otherItem) => {
-            if (otherItem !== item) {
-              otherItem.classList.remove("active");
-            }
-          });
-
           item.classList.toggle("active");
         });
       });
