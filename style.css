@@ -603,6 +603,8 @@ footer {
 
 .media-title {
   line-height: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .media-grid {
@@ -613,6 +615,7 @@ footer {
 }
 
 .media-card {
+  position: relative;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -639,8 +642,21 @@ footer {
   border-radius: 0 0 12px 0;
 }
 
+.media-date {
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  font-size: 0.85rem;
+  color: #777;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
 .media-content {
   padding: 24px;
+  padding-top: 20px;
 }
 
 .media-card h3 {
